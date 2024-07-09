@@ -1,0 +1,14 @@
+type Query {
+  temperatureListQuery: [CityTemperature!]! @field(resolver: "App\\GraphQL\\Queries\\TemperatureListQuery@__invoke")
+  temperatureByCity(city: String!): [CityTemperature!]! @field(resolver: "App\\GraphQL\\Queries\\TemperatureByCityQuery@__invoke")
+  temperatureByDate(date: String!): [CityTemperature!]! @field(resolver: "App\\GraphQL\\Queries\\TemperatureByDateQuery@__invoke")
+  temperatureByCityAndDate(city: String!, date: String!): [CityTemperature!]! @field(resolver: "App\\GraphQL\\Queries\\TemperatureByCityAndDateQuery@__invoke")
+}
+
+type CityTemperature {
+  id: ID!
+  city: String!
+  temperature: Float!
+  full_data: String
+  created_at: String!
+}
