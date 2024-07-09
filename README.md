@@ -45,11 +45,16 @@ php artisan get:temperature --city={your_city}
     GET параметри: day, city
     Якщо вказати один з них, виведення відбудеться згідно вказаного параметру, якщо не вказати жодного - виведе цілий список
 2. SOAP api
+
     Реалізація SOAP api, віддає xml. Також зроблено роути для кожної потреби:
-    http://localhost:8080/api/soap/temperatures/date/{date} - виведення за датою, формат {date} Y-m-d
-    http://localhost:8080/api/soap/temperatures/city/{city} - виведення за містом, {city} - строка з великими та малими літерами
-    http://localhost:8080/api/soap/temperatures/info/{date}/{city} - виведення за датою та містом, формат {date} Y-m-d, {city} - строка з великими та малими літерами
-    http://localhost:8080/api/soap/temperatures/info - виведення цілого списку
+
+    http://localhost:8080/api/soap/temperatures/date/{date} - виведення за датою, формат {date} Y-m-d.
+
+    http://localhost:8080/api/soap/temperatures/city/{city} - виведення за містом, {city} - строка з великими та малими літерами.
+
+    http://localhost:8080/api/soap/temperatures/info/{date}/{city} - виведення за датою та містом, формат {date} Y-m-d, {city} - строка з великими та малими літерами.
+
+    http://localhost:8080/api/soap/temperatures/info - виведення цілого списку.
 
 3. GraphQL api
     Реалізація GraphQL api. Запити:
@@ -76,7 +81,7 @@ php artisan get:temperature --city={your_city}
             full_data
             created_at
         }
-}
+    }
     ```
     За датою:
     ```graphql
